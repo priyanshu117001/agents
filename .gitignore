@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.env
+
+# Virtual environments
+.venv/
+test/
+
+# OS
+.DS_Store
