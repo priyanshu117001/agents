@@ -78,12 +78,12 @@ class Me:
         google_api_key = os.getenv('GOOGLE_API_KEY')
         self.openai = OpenAI(api_key=google_api_key, base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
         self.name = "Priyanshu Agarwal"
-        reader = PdfReader("app/me/linkedin.pdf")
+        # reader = PdfReader("app/me/linkedin.pdf")
         self.linkedin = ""
-        for page in reader.pages:
-            text = page.extract_text()
-            if text:
-                self.linkedin += text
+        # for page in reader.pages:
+        #     text = page.extract_text()
+        #     if text:
+        #         self.linkedin += text
         with open("app/me/priyanshu_kb_full.md", "r", encoding="utf-8") as f:
             self.summary = f.read()
 
