@@ -12,11 +12,17 @@ import os
 import requests
 from pypdf import PdfReader
 from app.agent import Me
+from fastapi.middleware.cors import CORSMiddleware 
 
 
 
-
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 👈 For testing; replace with ["https://yourwebsite.com"] in prod
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow POST, GET, OPTIONS, etc.
+    allow_headers=["*"],  # Allow Content-Type, Authorization, etc.
+)
 # Initialize FastAPI
 app = FastAPI(title="Personal Agent API", version="1.0")
 
