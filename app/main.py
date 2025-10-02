@@ -14,7 +14,7 @@ from pypdf import PdfReader
 from app.agent import Me
 from fastapi.middleware.cors import CORSMiddleware 
 
-
+app = FastAPI(title="Personal Agent API", version="1.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,7 +24,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allow Content-Type, Authorization, etc.
 )
 # Initialize FastAPI
-app = FastAPI(title="Personal Agent API", version="1.0")
+
 
 # Load API key from environment
 openai.api_key = os.getenv("OPENAI_API_KEY")
